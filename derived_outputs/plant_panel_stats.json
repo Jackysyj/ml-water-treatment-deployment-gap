@@ -1,0 +1,208 @@
+{
+  "n_plants": 6,
+  "best_plant_core_random_cv": 0.396,
+  "worst_plant_core_random_cv": -0.098,
+  "median_plant_core_random_cv": 0.081,
+  "feature_scenarios": {
+    "feedforward_influent_only": "Routine influent variables available before effluent or actuator feedback is observed.",
+    "rolling_persistence": "Previous observed effluent value for the same target, using only earlier distinct timestamps.",
+    "autoregressive_augmented": "Routine influent variables plus the previous observed effluent value for the same target."
+  },
+  "scenario_summary": {
+    "random_cv_mean_baseline": {
+      "mean": -0.013,
+      "median": -0.004,
+      "n": 29
+    },
+    "random_cv_persistence": {
+      "mean": -1.027,
+      "median": -1.024,
+      "n": 29
+    },
+    "random_cv_influent_only": {
+      "mean": 0.093,
+      "median": 0.063,
+      "n": 29
+    },
+    "random_cv_influent_plus_lagged_effluent": {
+      "mean": 0.103,
+      "median": 0.066,
+      "n": 29
+    },
+    "walk_forward_mean_baseline": {
+      "mean": -0.047,
+      "median": -0.024,
+      "n": 29
+    },
+    "walk_forward_persistence": {
+      "mean": -0.897,
+      "median": -0.96,
+      "n": 29
+    },
+    "walk_forward_influent_only": {
+      "mean": 0.025,
+      "median": 0.029,
+      "n": 29
+    },
+    "walk_forward_influent_plus_lagged_effluent": {
+      "mean": 0.037,
+      "median": 0.031,
+      "n": 29
+    }
+  },
+  "anonymisation": "Plants labelled 1-6; no real dates or identities; raw records under utility confidentiality, derived outputs only.",
+  "split_policy": "All temporal splits use unique calendar dates. Lagged effluent values use only earlier distinct timestamps, so rows sharing the same logged timestamp do not leak target information.",
+  "walk_forward_protocol": "Each expanding-window fold retrains on past date blocks with fixed hyperparameters and no tuning on the future test block.",
+  "residence_time_check": "Daily-aggregated lag scan (0-3 d) does not raise influent-only R2; simple time-offset misalignment is not the main explanation.",
+  "plants": [
+    {
+      "plant": "Plant 1",
+      "n_complete": 1682,
+      "n_model_rows_min": 1681,
+      "n_predictors": 13,
+      "n_days": 365,
+      "span_days": 364,
+      "dup_timestamp_rows": 762,
+      "core_targets": [
+        "COD",
+        "NH3-N",
+        "TN",
+        "TSS"
+      ],
+      "distinctive_influent_indicators": "petroleum hydrocarbons, chromaticity, nitrobenzene, cyanide, sulfide, volatile phenols and formaldehyde",
+      "core_random_cv_mean": 0.396,
+      "core_walk_forward_mean": 0.099,
+      "core_walk_forward_persistence_mean": -0.267,
+      "core_walk_forward_augmented_mean": 0.188,
+      "effluent_cv_pct_range": [
+        17.8,
+        56.2
+      ]
+    },
+    {
+      "plant": "Plant 2",
+      "n_complete": 1031,
+      "n_model_rows_min": 1030,
+      "n_predictors": 8,
+      "n_days": 464,
+      "span_days": 546,
+      "dup_timestamp_rows": 0,
+      "core_targets": [
+        "COD",
+        "NH3-N",
+        "TN",
+        "TP",
+        "TSS"
+      ],
+      "distinctive_influent_indicators": "BOD5 and anionic surfactants",
+      "core_random_cv_mean": 0.072,
+      "core_walk_forward_mean": 0.004,
+      "core_walk_forward_persistence_mean": -0.963,
+      "core_walk_forward_augmented_mean": 0.023,
+      "effluent_cv_pct_range": [
+        79.9,
+        98.2
+      ]
+    },
+    {
+      "plant": "Plant 3",
+      "n_complete": 1110,
+      "n_model_rows_min": 1109,
+      "n_predictors": 11,
+      "n_days": 449,
+      "span_days": 514,
+      "dup_timestamp_rows": 0,
+      "core_targets": [
+        "COD",
+        "NH3-N",
+        "TN",
+        "TP",
+        "TSS"
+      ],
+      "distinctive_influent_indicators": "volatile phenols, benzene-series compounds, total chromium, total nickel and chloride",
+      "core_random_cv_mean": 0.049,
+      "core_walk_forward_mean": 0.019,
+      "core_walk_forward_persistence_mean": -0.947,
+      "core_walk_forward_augmented_mean": 0.019,
+      "effluent_cv_pct_range": [
+        72.3,
+        99.8
+      ]
+    },
+    {
+      "plant": "Plant 4",
+      "n_complete": 483,
+      "n_model_rows_min": 482,
+      "n_predictors": 9,
+      "n_days": 288,
+      "span_days": 470,
+      "dup_timestamp_rows": 0,
+      "core_targets": [
+        "COD",
+        "NH3-N",
+        "TN",
+        "TP",
+        "TSS"
+      ],
+      "distinctive_influent_indicators": "TOC, sulfate and antibiotic residues",
+      "core_random_cv_mean": -0.098,
+      "core_walk_forward_mean": -0.073,
+      "core_walk_forward_persistence_mean": -1.121,
+      "core_walk_forward_augmented_mean": -0.09,
+      "effluent_cv_pct_range": [
+        99.7,
+        105.0
+      ]
+    },
+    {
+      "plant": "Plant 5",
+      "n_complete": 1081,
+      "n_model_rows_min": 1080,
+      "n_predictors": 9,
+      "n_days": 449,
+      "span_days": 530,
+      "dup_timestamp_rows": 0,
+      "core_targets": [
+        "COD",
+        "NH3-N",
+        "TN",
+        "TP",
+        "TSS"
+      ],
+      "distinctive_influent_indicators": "BOD5, animal and vegetable oil, and faecal coliforms",
+      "core_random_cv_mean": 0.091,
+      "core_walk_forward_mean": 0.081,
+      "core_walk_forward_persistence_mean": -0.94,
+      "core_walk_forward_augmented_mean": 0.079,
+      "effluent_cv_pct_range": [
+        86.2,
+        104.0
+      ]
+    },
+    {
+      "plant": "Plant 6",
+      "n_complete": 619,
+      "n_model_rows_min": 618,
+      "n_predictors": 11,
+      "n_days": 279,
+      "span_days": 347,
+      "dup_timestamp_rows": 0,
+      "core_targets": [
+        "COD",
+        "NH3-N",
+        "TN",
+        "TP",
+        "TSS"
+      ],
+      "distinctive_influent_indicators": "fluoride, total copper, total nickel, TOC and conductivity",
+      "core_random_cv_mean": 0.106,
+      "core_walk_forward_mean": 0.034,
+      "core_walk_forward_persistence_mean": -1.015,
+      "core_walk_forward_augmented_mean": 0.032,
+      "effluent_cv_pct_range": [
+        79.5,
+        98.9
+      ]
+    }
+  ]
+}

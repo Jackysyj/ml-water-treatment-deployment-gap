@@ -1,0 +1,20 @@
+{
+  "deployment_verification": {
+    "n_deployed_labels_in_corpus": 12,
+    "n_confirmed_full_text": 12,
+    "n_unconfirmed": 0,
+    "positive_class_precision": 1.0,
+    "note": "Every plant-deployment label in the full-text analysis corpus was checked against the full text; all were confirmed. Abstract-only records (which could not be verified) are excluded from the corpus."
+  },
+  "validation_verification": {
+    "n_rigorous_labels_in_corpus": 77,
+    "n_confirmed_rigorous": 66,
+    "n_reclassified": 11,
+    "labelled_bucket_precision": 0.857,
+    "reclassified_to": {
+      "none_reported": 8,
+      "k_fold": 3
+    },
+    "scope_note": "Precision audit of the labelled-rigorous bucket only (false positives); the non-rigorous majority was not re-read, so recall was not measured. The corpus-level rigorous-validation percentage is reported as the LLM label rate, qualified by this measured precision."
+  }
+}

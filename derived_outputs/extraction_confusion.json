@@ -1,0 +1,147 @@
+{
+  "deployed_in_plant": {
+    "labels": [
+      "false"
+    ],
+    "matrix": {
+      "false": {
+        "false": 50
+      }
+    },
+    "true_positive": 0,
+    "false_positive": 0,
+    "false_negative": 0,
+    "true_negative": 50,
+    "precision_for_deployed": null,
+    "recall_for_deployed": null,
+    "n_gold_deployed": 0
+  },
+  "control_loop_type": {
+    "labels": [
+      "advisory",
+      "closed_loop",
+      "none",
+      "open_loop"
+    ],
+    "matrix": {
+      "advisory": {
+        "advisory": 4,
+        "closed_loop": 0,
+        "none": 0,
+        "open_loop": 0
+      },
+      "closed_loop": {
+        "advisory": 2,
+        "closed_loop": 3,
+        "none": 0,
+        "open_loop": 0
+      },
+      "none": {
+        "advisory": 1,
+        "closed_loop": 1,
+        "none": 32,
+        "open_loop": 5
+      },
+      "open_loop": {
+        "advisory": 0,
+        "closed_loop": 0,
+        "none": 2,
+        "open_loop": 0
+      }
+    }
+  },
+  "sub_field": {
+    "labels": [
+      "coagulation",
+      "control",
+      "dbp",
+      "membrane",
+      "monitoring",
+      "other",
+      "sludge",
+      "wwtp"
+    ],
+    "matrix": {
+      "coagulation": {
+        "coagulation": 4,
+        "control": 0,
+        "dbp": 0,
+        "membrane": 1,
+        "monitoring": 0,
+        "other": 0,
+        "sludge": 0,
+        "wwtp": 0
+      },
+      "control": {
+        "coagulation": 0,
+        "control": 5,
+        "dbp": 0,
+        "membrane": 0,
+        "monitoring": 0,
+        "other": 0,
+        "sludge": 0,
+        "wwtp": 0
+      },
+      "dbp": {
+        "coagulation": 0,
+        "control": 0,
+        "dbp": 2,
+        "membrane": 0,
+        "monitoring": 0,
+        "other": 0,
+        "sludge": 0,
+        "wwtp": 0
+      },
+      "membrane": {
+        "coagulation": 0,
+        "control": 0,
+        "dbp": 0,
+        "membrane": 6,
+        "monitoring": 0,
+        "other": 0,
+        "sludge": 0,
+        "wwtp": 0
+      },
+      "monitoring": {
+        "coagulation": 0,
+        "control": 0,
+        "dbp": 0,
+        "membrane": 0,
+        "monitoring": 4,
+        "other": 0,
+        "sludge": 0,
+        "wwtp": 1
+      },
+      "other": {
+        "coagulation": 0,
+        "control": 0,
+        "dbp": 0,
+        "membrane": 0,
+        "monitoring": 0,
+        "other": 1,
+        "sludge": 0,
+        "wwtp": 0
+      },
+      "sludge": {
+        "coagulation": 0,
+        "control": 0,
+        "dbp": 0,
+        "membrane": 0,
+        "monitoring": 0,
+        "other": 0,
+        "sludge": 7,
+        "wwtp": 0
+      },
+      "wwtp": {
+        "coagulation": 0,
+        "control": 0,
+        "dbp": 0,
+        "membrane": 0,
+        "monitoring": 0,
+        "other": 0,
+        "sludge": 0,
+        "wwtp": 19
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+subset,n,deployed_n,deployed_pct,real_time_pct,temporal_external_walkforward_pct,uq_pct,code_pct,data_pct,interpretability_pct,r2_n,r2_median,piml_hybrid_keyword_n,piml_hybrid_keyword_pct
+full_500,500,19,3.8,6.0,16.6,7.6,6.2,11.4,23.2,228,0.97,56,11.2
+year_2018_2025,485,17,3.5,5.8,16.7,7.6,6.4,11.5,23.3,222,0.97,55,11.3
+year_2018_2025_fulltext,423,12,2.8,5.2,18.2,8.5,7.3,13.2,24.3,202,0.968,47,11.1
+analysis_article_only,379,12,3.2,5.5,17.9,8.4,8.2,14.2,24.5,185,0.97,43,11.3
+analysis_conference_excluded,385,12,3.1,5.5,17.4,8.6,8.1,14.0,24.2,188,0.969,45,11.7
+analysis_high_impact_journal,29,0,0.0,0.0,13.8,6.9,20.7,20.7,44.8,17,0.97,3,10.3
+analysis_core_water_journal,92,2,2.2,5.4,17.4,9.8,12.0,17.4,28.3,47,0.95,16,17.4

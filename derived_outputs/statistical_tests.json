@@ -1,0 +1,263 @@
+{
+  "phi_tests": {
+    "deployed_vs_UQ": {
+      "phi": 0.05,
+      "chi2": 1.055,
+      "p": 0.3043,
+      "n": 423,
+      "contingency_table": [
+        [
+          377,
+          34
+        ],
+        [
+          10,
+          2
+        ]
+      ]
+    },
+    "deployed_vs_interp": {
+      "phi": 0.003,
+      "chi2": 0.003,
+      "p": 0.9575,
+      "n": 423,
+      "contingency_table": [
+        [
+          311,
+          100
+        ],
+        [
+          9,
+          3
+        ]
+      ]
+    },
+    "code_vs_data": {
+      "phi": 0.506,
+      "chi2": 108.208,
+      "p": 0.0,
+      "n": 423,
+      "contingency_table": [
+        [
+          359,
+          33
+        ],
+        [
+          8,
+          23
+        ]
+      ]
+    },
+    "deployed_vs_code": {
+      "phi": 0.007,
+      "chi2": 0.018,
+      "p": 0.8922,
+      "n": 423,
+      "contingency_table": [
+        [
+          381,
+          30
+        ],
+        [
+          11,
+          1
+        ]
+      ]
+    },
+    "deployed_vs_data": {
+      "phi": -0.025,
+      "chi2": 0.259,
+      "p": 0.611,
+      "n": 423,
+      "contingency_table": [
+        [
+          356,
+          55
+        ],
+        [
+          11,
+          1
+        ]
+      ]
+    }
+  },
+  "wilson_ci": {
+    "deployed": {
+      "k": 12,
+      "n": 423,
+      "pct": 2.8,
+      "ci_lower": 1.6,
+      "ci_upper": 4.9
+    },
+    "real_time": {
+      "k": 22,
+      "n": 423,
+      "pct": 5.2,
+      "ci_lower": 3.5,
+      "ci_upper": 7.7
+    },
+    "UQ": {
+      "k": 36,
+      "n": 423,
+      "pct": 8.5,
+      "ci_lower": 6.2,
+      "ci_upper": 11.6
+    },
+    "real_ww": {
+      "k": 313,
+      "n": 423,
+      "pct": 74.0,
+      "ci_lower": 69.6,
+      "ci_upper": 77.9
+    },
+    "code": {
+      "k": 31,
+      "n": 423,
+      "pct": 7.3,
+      "ci_lower": 5.2,
+      "ci_upper": 10.2
+    },
+    "interpretability": {
+      "k": 103,
+      "n": 423,
+      "pct": 24.3,
+      "ci_lower": 20.5,
+      "ci_upper": 28.7
+    }
+  },
+  "r2_tier_fisher": {
+    "high_deployed": 2,
+    "high_total": 63,
+    "low_deployed": 2,
+    "low_total": 57,
+    "high_pct": 3.2,
+    "low_pct": 3.5,
+    "odds_ratio": 0.902,
+    "p": 1.0
+  },
+  "firth_regression": {
+    "model1_unadjusted": [
+      {
+        "variable": "intercept",
+        "OR": 0.028,
+        "OR_lower": 0.014,
+        "OR_upper": 0.057,
+        "p": 0.0,
+        "coef": -3.5672,
+        "se": 0.3612
+      },
+      {
+        "variable": "UQ",
+        "OR": 2.572,
+        "OR_lower": 0.627,
+        "OR_upper": 10.552,
+        "p": 0.1897,
+        "coef": 0.9446,
+        "se": 0.7203
+      },
+      {
+        "variable": "interpretability",
+        "OR": 1.135,
+        "OR_lower": 0.337,
+        "OR_upper": 3.829,
+        "p": 0.8381,
+        "coef": 0.1267,
+        "se": 0.6203
+      },
+      {
+        "variable": "temporal_validation",
+        "OR": 1.15,
+        "OR_lower": 0.287,
+        "OR_upper": 4.61,
+        "p": 0.8432,
+        "coef": 0.1401,
+        "se": 0.7082
+      }
+    ],
+    "model2_adjusted": [
+      {
+        "variable": "intercept",
+        "OR": 0.025,
+        "OR_lower": 0.011,
+        "OR_upper": 0.057,
+        "p": 0.0,
+        "coef": -3.684,
+        "se": 0.4159
+      },
+      {
+        "variable": "UQ",
+        "OR": 2.672,
+        "OR_lower": 0.66,
+        "OR_upper": 10.828,
+        "p": 0.1685,
+        "coef": 0.983,
+        "se": 0.7139
+      },
+      {
+        "variable": "interpretability",
+        "OR": 1.259,
+        "OR_lower": 0.366,
+        "OR_upper": 4.332,
+        "p": 0.7144,
+        "coef": 0.2307,
+        "se": 0.6304
+      },
+      {
+        "variable": "temporal_validation",
+        "OR": 1.116,
+        "OR_lower": 0.279,
+        "OR_upper": 4.462,
+        "p": 0.8762,
+        "coef": 0.1101,
+        "se": 0.7069
+      },
+      {
+        "variable": "is_control",
+        "OR": 2.346,
+        "OR_lower": 0.544,
+        "OR_upper": 10.127,
+        "p": 0.253,
+        "coef": 0.8528,
+        "se": 0.7461
+      },
+      {
+        "variable": "is_coagulation",
+        "OR": 1.598,
+        "OR_lower": 0.273,
+        "OR_upper": 9.368,
+        "p": 0.6034,
+        "coef": 0.4688,
+        "se": 0.9023
+      }
+    ]
+  },
+  "coag_real_ww_fisher": {
+    "OR": 6.364,
+    "p": 0.0023
+  },
+  "coag_sim_fisher": {
+    "OR": 0.0,
+    "p": 0.0145,
+    "coag_sim": 0,
+    "others_sim": 55,
+    "others_pct": 14.2
+  },
+  "ctrl_closedloop_fisher": {
+    "OR": 156.25,
+    "p": 0.0,
+    "ctrl_pct": 71.4,
+    "others_pct": 1.6
+  },
+  "ctrl_deploy_fisher": {
+    "OR": 1.855,
+    "p": 0.3382,
+    "ctrl_pct": 4.8,
+    "others_pct": 2.6
+  },
+  "coag_deploy_fisher": {
+    "OR": 1.008,
+    "p": 1.0,
+    "coag_pct": 2.9,
+    "others_pct": 2.8
+  }
+}

@@ -1,0 +1,332 @@
+{
+  "metadata": {
+    "data_file": "data/plant_private/raw_wwtp_exports/wsc.xlsx",
+    "data_source": "raw export with genuine sampling timestamps (no imputation, no normalisation)",
+    "n_samples": 1682,
+    "n_features": 13,
+    "n_unique_days": 365,
+    "time_min": "2021-01-01 01:00:00",
+    "time_max": "2021-12-31 21:00:00",
+    "feature_columns": [
+      "COD(In)",
+      "NH3-N(In)",
+      "pH(In)",
+      "TN(In)",
+      "TPH(In)",
+      "chromaticity(In)",
+      "TSS(In)",
+      "NB(In)",
+      "CN(In)",
+      "SF(In)",
+      "TP(In)",
+      "VP(In)",
+      "FCOH(In)"
+    ],
+    "targets": [
+      "COD(Out)",
+      "NH3-N(Out)",
+      "TN(Out)",
+      "TSS(Out)",
+      "pH(Out)",
+      "TPH(Out)",
+      "VP(Out)",
+      "SF(Out)",
+      "CN(Out)"
+    ],
+    "tp_out_note": "TP(Out) excluded: it is absent from the raw export (present only in the filled/normalised file as a constructed column).",
+    "duplicate_timestamp_rows": 762,
+    "split_policy": "All temporal splits are DATE-based so duplicated timestamps never straddle train/test.",
+    "missing_data_note": "Raw export has no missing cells; no imputation was applied in this analysis."
+  },
+  "regime_definitions": {
+    "random_cv": "Retrospective shuffled 5-fold CV (publication-style; argued to be optimistic).",
+    "chronological_holdout": "Date-based last-20%-of-days holdout (near-future).",
+    "walk_forward": "Date-based expanding-window forecast over 6 ordered date blocks (true operational extrapolation)."
+  },
+  "best_random_cv": [
+    {
+      "target": "CN(Out)",
+      "group": "auxiliary",
+      "best_model": "HGB",
+      "r2_mean": 0.855,
+      "r2_sd": 0.03,
+      "mae_mean": 0.013,
+      "rmse_mean": 0.019
+    },
+    {
+      "target": "SF(Out)",
+      "group": "auxiliary",
+      "best_model": "HGB",
+      "r2_mean": 0.525,
+      "r2_sd": 0.068,
+      "mae_mean": 0.003,
+      "rmse_mean": 0.006
+    },
+    {
+      "target": "TPH(Out)",
+      "group": "auxiliary",
+      "best_model": "RF",
+      "r2_mean": 0.726,
+      "r2_sd": 0.079,
+      "mae_mean": 0.056,
+      "rmse_mean": 0.136
+    },
+    {
+      "target": "VP(Out)",
+      "group": "auxiliary",
+      "best_model": "HGB",
+      "r2_mean": 0.387,
+      "r2_sd": 0.089,
+      "mae_mean": 0.045,
+      "rmse_mean": 0.068
+    },
+    {
+      "target": "pH(Out)",
+      "group": "auxiliary",
+      "best_model": "HGB",
+      "r2_mean": 0.746,
+      "r2_sd": 0.03,
+      "mae_mean": 0.059,
+      "rmse_mean": 0.093
+    },
+    {
+      "target": "COD(Out)",
+      "group": "core",
+      "best_model": "HGB",
+      "r2_mean": 0.476,
+      "r2_sd": 0.078,
+      "mae_mean": 3.184,
+      "rmse_mean": 4.824
+    },
+    {
+      "target": "NH3-N(Out)",
+      "group": "core",
+      "best_model": "RF",
+      "r2_mean": 0.336,
+      "r2_sd": 0.168,
+      "mae_mean": 0.17,
+      "rmse_mean": 0.279
+    },
+    {
+      "target": "TN(Out)",
+      "group": "core",
+      "best_model": "HGB",
+      "r2_mean": 0.404,
+      "r2_sd": 0.074,
+      "mae_mean": 0.828,
+      "rmse_mean": 1.314
+    },
+    {
+      "target": "TSS(Out)",
+      "group": "core",
+      "best_model": "HGB",
+      "r2_mean": 0.374,
+      "r2_sd": 0.058,
+      "mae_mean": 2.011,
+      "rmse_mean": 3.61
+    }
+  ],
+  "best_walk_forward": [
+    {
+      "target": "COD(Out)",
+      "group": "core",
+      "best_model": "RF",
+      "r2_mean": 0.136,
+      "r2_sd": 0.328
+    },
+    {
+      "target": "NH3-N(Out)",
+      "group": "core",
+      "best_model": "RF",
+      "r2_mean": 0.002,
+      "r2_sd": 0.276
+    },
+    {
+      "target": "TN(Out)",
+      "group": "core",
+      "best_model": "RF",
+      "r2_mean": 0.145,
+      "r2_sd": 0.142
+    },
+    {
+      "target": "TSS(Out)",
+      "group": "core",
+      "best_model": "RF",
+      "r2_mean": 0.113,
+      "r2_sd": 0.178
+    },
+    {
+      "target": "pH(Out)",
+      "group": "auxiliary",
+      "best_model": "HGB",
+      "r2_mean": 0.522,
+      "r2_sd": 0.2
+    },
+    {
+      "target": "TPH(Out)",
+      "group": "auxiliary",
+      "best_model": "RF",
+      "r2_mean": 0.676,
+      "r2_sd": 0.103
+    },
+    {
+      "target": "VP(Out)",
+      "group": "auxiliary",
+      "best_model": "RF",
+      "r2_mean": -0.069,
+      "r2_sd": 0.226
+    },
+    {
+      "target": "SF(Out)",
+      "group": "auxiliary",
+      "best_model": "HGB",
+      "r2_mean": 0.23,
+      "r2_sd": 0.187
+    },
+    {
+      "target": "CN(Out)",
+      "group": "auxiliary",
+      "best_model": "HGB",
+      "r2_mean": 0.711,
+      "r2_sd": 0.185
+    }
+  ],
+  "group_summary": {
+    "core": {
+      "targets": [
+        "COD(Out)",
+        "NH3-N(Out)",
+        "TN(Out)",
+        "TSS(Out)"
+      ],
+      "random_cv_mean_best_r2": 0.397,
+      "random_cv_median_best_r2": 0.389,
+      "random_cv_min_best_r2": 0.336,
+      "random_cv_max_best_r2": 0.476,
+      "walk_forward_mean_best_r2": 0.099
+    },
+    "auxiliary": {
+      "targets": [
+        "pH(Out)",
+        "TPH(Out)",
+        "VP(Out)",
+        "SF(Out)",
+        "CN(Out)"
+      ],
+      "random_cv_mean_best_r2": 0.648,
+      "random_cv_median_best_r2": 0.726,
+      "random_cv_min_best_r2": 0.387,
+      "random_cv_max_best_r2": 0.855,
+      "walk_forward_mean_best_r2": 0.414
+    }
+  },
+  "headline": {
+    "core_random_cv_mean_r2": 0.397,
+    "auxiliary_random_cv_mean_r2": 0.648,
+    "core_walk_forward_mean_r2": 0.099
+  },
+  "temporal_holdout_r2_drop_random_minus_chronological": {
+    "CN(Out)": 0.005,
+    "COD(Out)": 0.048,
+    "NH3-N(Out)": 0.334,
+    "SF(Out)": 0.121,
+    "TN(Out)": 0.251,
+    "TPH(Out)": -0.064,
+    "TSS(Out)": 0.096,
+    "VP(Out)": 0.477,
+    "pH(Out)": 0.001
+  },
+  "null_shuffled_y_r2": {
+    "COD(Out)": -0.756,
+    "NH3-N(Out)": -2.706,
+    "TN(Out)": -1.225,
+    "TSS(Out)": -0.151,
+    "pH(Out)": -0.722,
+    "TPH(Out)": -1.724,
+    "VP(Out)": -1.246,
+    "SF(Out)": -0.009,
+    "CN(Out)": -0.184
+  },
+  "top_feature_shift": [
+    {
+      "feature": "pH(In)",
+      "early_mean": 8.024,
+      "late_mean": 8.281,
+      "smd": 0.79,
+      "ks_statistic": 0.336
+    },
+    {
+      "feature": "VP(In)",
+      "early_mean": 16.468,
+      "late_mean": 18.646,
+      "smd": 0.566,
+      "ks_statistic": 0.324
+    },
+    {
+      "feature": "chromaticity(In)",
+      "early_mean": 35.955,
+      "late_mean": 32.678,
+      "smd": -0.518,
+      "ks_statistic": 0.424
+    },
+    {
+      "feature": "FCOH(In)",
+      "early_mean": 0.792,
+      "late_mean": 0.591,
+      "smd": -0.497,
+      "ks_statistic": 0.218
+    },
+    {
+      "feature": "COD(In)",
+      "early_mean": 633.669,
+      "late_mean": 700.146,
+      "smd": 0.43,
+      "ks_statistic": 0.234
+    },
+    {
+      "feature": "TSS(In)",
+      "early_mean": 61.282,
+      "late_mean": 54.62,
+      "smd": -0.241,
+      "ks_statistic": 0.109
+    },
+    {
+      "feature": "TN(In)",
+      "early_mean": 31.654,
+      "late_mean": 32.678,
+      "smd": 0.136,
+      "ks_statistic": 0.166
+    },
+    {
+      "feature": "TP(In)",
+      "early_mean": 0.425,
+      "late_mean": 0.404,
+      "smd": -0.127,
+      "ks_statistic": 0.161
+    }
+  ],
+  "conformal_summary": {
+    "core": {
+      "mean_coverage": 0.967,
+      "mean_interval_width": 7.464
+    },
+    "auxiliary": {
+      "mean_coverage": 0.954,
+      "mean_interval_width": 0.185
+    }
+  },
+  "imputed_sensitivity": {
+    "available": true,
+    "best_random_cv_r2": {
+      "COD(Out)": 0.424,
+      "NH3-N(Out)": 0.302,
+      "TN(Out)": 0.323,
+      "TSS(Out)": 0.452,
+      "pH(Out)": 0.72,
+      "TPH(Out)": 0.496,
+      "VP(Out)": 0.779,
+      "SF(Out)": 0.434,
+      "CN(Out)": 0.782
+    }
+  }
+}

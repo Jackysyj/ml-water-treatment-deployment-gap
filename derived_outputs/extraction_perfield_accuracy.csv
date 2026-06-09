@@ -1,0 +1,16 @@
+field,type,is_key_field,n,n_correct,accuracy,macro_f1,n_labels
+real_time_testing,boolean,False,50,48,0.96,0.49,2
+deployed_in_plant,boolean,True,50,50,1.0,1.0,1
+uses_real_wastewater,boolean,False,50,48,0.96,0.95,2
+code_available,boolean,False,50,50,1.0,1.0,2
+data_available,boolean,False,50,48,0.96,0.917,2
+uncertainty_quantification,boolean,False,50,48,0.96,0.889,2
+sub_field,categorical,True,50,48,0.96,0.959,8
+data_source,categorical,False,50,49,0.98,0.989,5
+best_metric_type,categorical,False,50,41,0.82,0.695,9
+validation_method,categorical,False,50,38,0.76,0.767,4
+interpretability_method,categorical,False,50,48,0.96,0.972,5
+model_framework,categorical,False,50,45,0.9,0.919,6
+control_loop_type,categorical,True,50,39,0.78,0.568,4
+scale,categorical,False,50,48,0.96,0.921,5
+ml_algorithms,list,False,50,,,0.887,

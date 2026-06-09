@@ -1,0 +1,305 @@
+{
+  "metadata": {
+    "data_file": "data/literature/extracted/fulltext_extraction_500_cleaned.json",
+    "total_records": 500,
+    "note": "PIML/hybrid counts are conservative keyword-screen counts and require manual confirmation before causal claims."
+  },
+  "year_out_of_scope": {
+    "n": 15,
+    "deployed_n": 2,
+    "records": [
+      {
+        "doi": "10.2166/aqua.2015.030",
+        "paper_title": "Arti\ufb01cial neural network modeling of the effluent quality index for municipal waste water treatment plants using quality variables: south of Tehran waste water treatment plant",
+        "year": 2015,
+        "journal": "Journal of Water Supply: Research and Technology - Aqua",
+        "sub_field": "WWTP",
+        "deployed_in_plant": false
+      },
+      {
+        "doi": "10.15171/ehem.2016.05",
+        "paper_title": "Prediction of the waste stabilization pond performance using linear multiple regression and multi-layer perceptron neural network: a case study of Birjand, Iran",
+        "year": 2016,
+        "journal": "Environmental Health Engineering and Management",
+        "sub_field": "WWTP",
+        "deployed_in_plant": false
+      },
+      {
+        "doi": "10.4236/jsea.2016.92002",
+        "paper_title": "Analysis of Ammonia Nitrogen Content in Water Based on Weighted Least Squares Support Vector Machine (WLSSVM) Algorithm",
+        "year": 2016,
+        "journal": "Journal of Software Engineering and Applications",
+        "sub_field": "monitoring",
+        "deployed_in_plant": false
+      },
+      {
+        "doi": "10.5391/ijfis.2016.16.3.197",
+        "paper_title": "Post-Chlorination Process Control based on Flow Prediction by Time Series Neural Network in Water Treatment Plant",
+        "year": 2016,
+        "journal": "The International Journal of Fuzzy Logic and Intelligent Systems",
+        "sub_field": "control",
+        "deployed_in_plant": true
+      },
+      {
+        "doi": "10.1109/i2mtc.2017.7969924",
+        "paper_title": "A deep learning based soft sensor for a sour water stripping plant",
+        "year": 2017,
+        "journal": "2017 IEEE International Instrumentation and Measurement Technology Conference (I2MTC)",
+        "sub_field": "WWTP",
+        "deployed_in_plant": false
+      },
+      {
+        "doi": "10.4025/actascitechnol.v39i1.29353",
+        "paper_title": "&lt;b&gt;Intelligent system for improving dosage control",
+        "year": 2017,
+        "journal": "Acta Scientiarum. Technology",
+        "sub_field": "coagulation",
+        "deployed_in_plant": true
+      },
+      {
+        "doi": "10.15666/aeer/1504_129142",
+        "paper_title": "ROLE OF DIFFERENT PARAMETERS IN THE QUANTIFICATION OF GENERATED SLUDGE IN THE OXYLATOR UNIT OF WATER TREATMENT PLANTS, USING ARTIFICIAL NEURAL NETWORK MODEL (CASE STUDY OF JALALIEH WATER TREATMENT PLANT, TEHRAN, IRAN)",
+        "year": 2017,
+        "journal": "Applied Ecology and Environmental Research",
+        "sub_field": "sludge",
+        "deployed_in_plant": false
+      },
+      {
+        "doi": "10.29007/dlvk",
+        "paper_title": "A Data-Driven Approach for Optimal Control Parameters in WWTP: the VEAS Experience in Scandinavia",
+        "year": 2017,
+        "journal": "EPiC Series in Engineering",
+        "sub_field": "WWTP",
+        "deployed_in_plant": false
+      },
+      {
+        "doi": "10.18178/ijesd.2017.8.7.1004",
+        "paper_title": "Introducing Ensemble Methods to Predict the Performance of Waste Water Treatment Plants (WWTP)",
+        "year": 2017,
+        "journal": "International Journal of Environmental Science and Development",
+        "sub_field": "WWTP",
+        "deployed_in_plant": false
+      },
+      {
+        "doi": "10.12989/mwt.2018.9.2.115",
+        "paper_title": "Modelling of starch industry wastewater microfiltration parameters by neural network",
+        "year": 2017,
+        "journal": "Not specified",
+        "sub_field": "membrane",
+        "deployed_in_plant": false
+      },
+      {
+        "doi": "10.3390/s17122806",
+        "paper_title": "Contamination Event Detection with Multivariate Time-Series Data in Agricultural Water Monitoring",
+        "year": 2017,
+        "journal": "Sensors",
+        "sub_field": "monitoring",
+        "deployed_in_plant": false
+      },
+      {
+        "doi": "10.3390/w9020105",
+        "paper_title": "Machine Learning Algorithms for the Forecasting of Wastewater Quality Indicators",
+        "year": 2017,
+        "journal": "Water",
+        "sub_field": "monitoring",
+        "deployed_in_plant": false
+      },
+      {
+        "doi": "10.2166/wst.2017.417",
+        "paper_title": "Research on a soft measurement model of sewage treatment based on a case-based reasoning approach",
+        "year": 2017,
+        "journal": "Water Science and Technology",
+        "sub_field": "WWTP",
+        "deployed_in_plant": false
+      },
+      {
+        "doi": "10.1109/tii.2025.3626044",
+        "paper_title": "Reinforcement Learning-Based Adaptive Event-Triggered Control for Wastewater Treatment Process",
+        "year": 2026,
+        "journal": "IEEE Transactions on Industrial Informatics",
+        "sub_field": "control",
+        "deployed_in_plant": false
+      },
+      {
+        "doi": "10.1093/jigpal/jzaf035",
+        "paper_title": "Development of virtual sensors using multi-plant data for wastewater treatment applications: a case study on nitrogen prediction in effluents",
+        "year": 2026,
+        "journal": "Logic Journal of the IGPL",
+        "sub_field": "WWTP",
+        "deployed_in_plant": false
+      }
+    ]
+  },
+  "conference_like": {
+    "n": 44,
+    "pct": 8.8
+  },
+  "subset_summaries": [
+    {
+      "subset": "full_500",
+      "n": 500,
+      "deployed_n": 19,
+      "deployed_pct": 3.8,
+      "real_time_pct": 6.0,
+      "temporal_external_walkforward_pct": 16.6,
+      "uq_pct": 7.6,
+      "code_pct": 6.2,
+      "data_pct": 11.4,
+      "interpretability_pct": 23.2,
+      "r2_n": 228,
+      "r2_median": 0.97,
+      "piml_hybrid_keyword_n": 56,
+      "piml_hybrid_keyword_pct": 11.2
+    },
+    {
+      "subset": "year_2018_2025",
+      "n": 485,
+      "deployed_n": 17,
+      "deployed_pct": 3.5,
+      "real_time_pct": 5.8,
+      "temporal_external_walkforward_pct": 16.7,
+      "uq_pct": 7.6,
+      "code_pct": 6.4,
+      "data_pct": 11.5,
+      "interpretability_pct": 23.3,
+      "r2_n": 222,
+      "r2_median": 0.97,
+      "piml_hybrid_keyword_n": 55,
+      "piml_hybrid_keyword_pct": 11.3
+    },
+    {
+      "subset": "year_2018_2025_fulltext",
+      "n": 423,
+      "deployed_n": 12,
+      "deployed_pct": 2.8,
+      "real_time_pct": 5.2,
+      "temporal_external_walkforward_pct": 18.2,
+      "uq_pct": 8.5,
+      "code_pct": 7.3,
+      "data_pct": 13.2,
+      "interpretability_pct": 24.3,
+      "r2_n": 202,
+      "r2_median": 0.968,
+      "piml_hybrid_keyword_n": 47,
+      "piml_hybrid_keyword_pct": 11.1
+    },
+    {
+      "subset": "analysis_article_only",
+      "n": 379,
+      "deployed_n": 12,
+      "deployed_pct": 3.2,
+      "real_time_pct": 5.5,
+      "temporal_external_walkforward_pct": 17.9,
+      "uq_pct": 8.4,
+      "code_pct": 8.2,
+      "data_pct": 14.2,
+      "interpretability_pct": 24.5,
+      "r2_n": 185,
+      "r2_median": 0.97,
+      "piml_hybrid_keyword_n": 43,
+      "piml_hybrid_keyword_pct": 11.3
+    },
+    {
+      "subset": "analysis_conference_excluded",
+      "n": 385,
+      "deployed_n": 12,
+      "deployed_pct": 3.1,
+      "real_time_pct": 5.5,
+      "temporal_external_walkforward_pct": 17.4,
+      "uq_pct": 8.6,
+      "code_pct": 8.1,
+      "data_pct": 14.0,
+      "interpretability_pct": 24.2,
+      "r2_n": 188,
+      "r2_median": 0.969,
+      "piml_hybrid_keyword_n": 45,
+      "piml_hybrid_keyword_pct": 11.7
+    },
+    {
+      "subset": "analysis_high_impact_journal",
+      "n": 29,
+      "deployed_n": 0,
+      "deployed_pct": 0.0,
+      "real_time_pct": 0.0,
+      "temporal_external_walkforward_pct": 13.8,
+      "uq_pct": 6.9,
+      "code_pct": 20.7,
+      "data_pct": 20.7,
+      "interpretability_pct": 44.8,
+      "r2_n": 17,
+      "r2_median": 0.97,
+      "piml_hybrid_keyword_n": 3,
+      "piml_hybrid_keyword_pct": 10.3
+    },
+    {
+      "subset": "analysis_core_water_journal",
+      "n": 92,
+      "deployed_n": 2,
+      "deployed_pct": 2.2,
+      "real_time_pct": 5.4,
+      "temporal_external_walkforward_pct": 17.4,
+      "uq_pct": 9.8,
+      "code_pct": 12.0,
+      "data_pct": 17.4,
+      "interpretability_pct": 28.3,
+      "r2_n": 47,
+      "r2_median": 0.95,
+      "piml_hybrid_keyword_n": 16,
+      "piml_hybrid_keyword_pct": 17.4
+    }
+  ],
+  "journal_composition": {
+    "high_impact_n": 33,
+    "high_impact_pct": 6.6,
+    "core_water_n": 109,
+    "core_water_pct": 21.8
+  },
+  "piml_hybrid_keyword": {
+    "n": 56,
+    "pct": 11.2,
+    "by_subfield": [
+      {
+        "sub_field": "DBP",
+        "sum": 2,
+        "count": 12,
+        "pct": 16.7
+      },
+      {
+        "sub_field": "WWTP",
+        "sum": 8,
+        "count": 149,
+        "pct": 5.4
+      },
+      {
+        "sub_field": "coagulation",
+        "sum": 4,
+        "count": 48,
+        "pct": 8.3
+      },
+      {
+        "sub_field": "control",
+        "sum": 27,
+        "count": 52,
+        "pct": 51.9
+      },
+      {
+        "sub_field": "membrane",
+        "sum": 7,
+        "count": 55,
+        "pct": 12.7
+      },
+      {
+        "sub_field": "monitoring",
+        "sum": 6,
+        "count": 123,
+        "pct": 4.9
+      },
+      {
+        "sub_field": "sludge",
+        "sum": 2,
+        "count": 61,
+        "pct": 3.3
+      }
+    ]
+  }
+}

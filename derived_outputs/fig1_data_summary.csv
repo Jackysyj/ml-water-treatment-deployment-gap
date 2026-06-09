@@ -1,0 +1,19 @@
+panel,key,value,n,deployed
+a,R2_WWTP,0.970,65,
+a,R2_monitoring,0.979,37,
+a,R2_control,0.990,9,
+a,R2_sludge,0.948,36,
+a,R2_membrane,0.964,30,
+a,R2_coagulation,0.979,18,
+a,R2_DBP,0.800,7,
+a,R2_total,0.968,202,
+d,Plant deployment,2.8,12,
+d,Real-time testing,5.2,22,
+d,Future-facing validation,18.2,77,
+d,Uncertainty quantification,8.5,36,
+d,Public code,7.3,31,
+d,Public data,13.2,56,
+e,tier_<0.90,3.5,57,2
+e,tier_0.90-0.95,0.0,28,0
+e,tier_0.95-0.99,1.9,54,1
+e,tier_>=0.99,3.2,63,2
